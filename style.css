@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+*::selection{
+    background: #111;
+    color: #fff;
+}
+body{
+    width: 100%;
+    background: #EFEFEF;
+    padding-top: 60px;
+}
+a{text-decoration: none;}
+nav{
+    padding: 0 clamp(10px, calc((100% - 1200px) / 2), calc((100% - 1200px) / 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background: #EFEFEF;
+    height: 60px;
+    width: 100%;
+}
+nav img{
+    height: 30px;
+    object-fit: cover;
+}
+nav div{
+    display: flex;
+    gap: 30px;
+}
+nav div a{
+    color: #111;
+    font-size: 14px;
+}
+
+.wrapper{
+    padding: 0 clamp(10px, calc((100% - 1200px) / 2), calc((100% - 1200px) / 2));
+}
+.wrapper .works{
+    margin-bottom: 200px;
+    user-select: none;
+}
+.wrapper .works h1{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.wrapper .work-col{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper .work-col .work-box{
+    margin-bottom: 30px;
+}
+.wrapper .work-col .work-box p{
+    font-size: 14px;
+}
+.wrapper .work-col .work-box span{
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+.wrapper .work-col .col1,.wrapper .work-col .col2{
+    flex: 50%;
+    max-width: 50%;
+}
+.wrapper .work-col .col1{
+    padding-right: 10px;
+}
+.wrapper .work-col .col2{
+    padding-left: 10px;
+}
+.wrapper .work-col .col1 img, .wrapper .work-col .col2 img{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.wrapper footer{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wrapper footer .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.wrapper footer .top span{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+}
+.wrapper footer .top .about{
+    width: 100%;
+    max-width: 400px;
+}
+.wrapper footer .top .about p{
+    font-size: 14px;
+}
+.wrapper footer .top .contact a{
+    display: block;
+    font-size: 32px;
+    color: #111;
+    margin-top: -10px;
+    text-decoration: underline;
+}
+.wrapper footer .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(17,17,17,0.3);
+}
+.wrapper footer .bottom a,.wrapper footer .bottom div{
+    color: #111;
+    font-size: 14px;
+}
+.wrapper footer .bottom .foot-nav{
+    display: flex;
+    gap: 30px;
+}
+
+
+@media (max-width: 770px) {
+    .wrapper footer .top{
+        gap: 100px;
+        flex-direction: column;
+    }
+    .wrapper footer .top .contact a{
+        font-size: 24px;
+    }
+    .wrapper .work-col .col1,.wrapper .work-col .col2{
+        flex: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
